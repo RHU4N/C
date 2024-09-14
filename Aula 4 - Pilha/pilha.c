@@ -57,3 +57,18 @@ void display(struct Node* top) {
    printf("NULL\n");
 }
 
+int main() {
+   struct Node* top = NULL;  // Inicializa o topo da pilha como NULL
+   push(&top, 1);  // Empilha 1
+   push(&top, 2);  // Empilha 2
+   push(&top, 3);  // Empilha 3
+   display(top);   // Exibe o conteúdo da pilha
+   pop(&top);      // Desempilha 3
+   display(top);   // Exibe o conteúdo da pilha
+   pop(&top);      // Desempilha 2
+   display(top);   // Exibe o conteúdo da pilha
+   pop(&top);      // Desempilha 1
+   display(top);   // Exibe o conteúdo da pilha
+   pop(&top);      // Tenta desempilhar de uma pilha vazia
+}
+
