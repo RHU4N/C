@@ -57,22 +57,3 @@ void display(struct Node* top) {
    printf("NULL\n");
 }
 
-// Função principal
-int main() {
-   struct Node* stack = NULL;  // Inicializa a pilha vazia
-   // Testa a inserção e remoção de elementos
-   push(&stack, 10);
-   push(&stack, 50);
-   push(&stack, 30);
-   // display(stack);
-   pop(&stack);
-   push(&stack, 14);
-   push(&stack, 24);
-   push(&stack, 34);
-   pop(&stack);
-   pop(&stack);
-   // display(stack);
-   // pop(&stack);
-   display(stack);
-   return 0;
-}
