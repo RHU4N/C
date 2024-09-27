@@ -1,33 +1,21 @@
-
-
-
 #include <stdio.h>
-int main(){
+    int main(){
+        int res; //variavel recebe tipo inteiro
+        int x = 10;  // variavel recebe valor 10
+        int y = 20; // variavel recebe valor 20
+        int *px; // definindo ponteiro x
+        int *py; // definindo ponteiro de y 
+        px = &x; //ponteiro x recebe o endereco fisico de x 
+        py = &y; // ponteiro y recebe o endereco fisico de y
 
+        res = *px+10; // armazenando na variavel de result o valor de x+10
+        *px = *py+5;//armazenando no ponteiro de x o valor de y+5
+        *py = res +*px;//armazenando no ponteiro de y o valor de x+10(res) + valor de y+5(*px)
 
-int res; //variavel recebe tipo inteiro
-int x = 10;  // variavel recebe valor 10
-int y = 20; // variavel recebe valor 20
-int *px; // definindo ponteiro x
-int *py; // definindo ponteiro de y 
-px = &x; //ponteiro x recebe o endereco fisico de x 
-py = &y; // ponteiro y recebe o endereco fisico de y
+        res=*py+2; //aramazendando em res o valor total até agora(*py)+2
 
-res = *px+10;
+        printf("%d",res);//imprimindo resultado
 
-*px = *py+5;
+        return 0;
 
-*py = res +*px;
-
-px=px;
-
-
-res=*py+2;
-
-
-
-printf("%d",res);
-
-return 0;
-
-}
+    }
